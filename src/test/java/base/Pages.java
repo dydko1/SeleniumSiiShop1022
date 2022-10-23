@@ -20,10 +20,10 @@ public class Pages extends TestBase {
     public SignInPage signInPage;
 
     @BeforeMethod
-    public void setupPages(){
+    public void setupPages() {
         cartPage = new CartPage(driver);
         productDetailsPage = new ProductDetailsPage(driver);
-        productGridPage= new ProductGridPage(driver);
+        productGridPage = new ProductGridPage(driver);
         productPopupPage = new ProductPopupPage(driver);
         myAccountPage = new MyAccountPage(driver);
         registrationPage = new RegistrationPage(driver);

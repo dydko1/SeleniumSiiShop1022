@@ -13,6 +13,7 @@ public class ProductPopupPage extends BasePage {
 
     @FindBy(css = ".modal-dialog .btn-primary")
     private WebElement proceedToCheckoutBtn;
+
     public CartPage proceedToCheckout() {
         click(proceedToCheckoutBtn);
         return new CartPage(driver);

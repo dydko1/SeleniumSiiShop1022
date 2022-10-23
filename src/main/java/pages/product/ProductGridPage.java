@@ -18,7 +18,7 @@ public class ProductGridPage extends BasePage {
     private List<WebElement> products;
 
     public ProductDetailsPage openProduct(String productName) {
-        click(driver.findElement(By.xpath("//*[.='"+ productName+ "']")));
+        click(driver.findElement(By.xpath("//*[.='" + productName + "']")));
         return new ProductDetailsPage(driver);
     }
 }

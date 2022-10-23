@@ -17,6 +17,7 @@ public class CartPage extends BasePage {
 
     @FindBy(css = "span.product-price")
     private WebElement productTotalPrice;
+
     public String getProductName() {
         return productName.getText();
     }

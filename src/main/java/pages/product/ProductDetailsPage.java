@@ -24,7 +24,7 @@ public class ProductDetailsPage extends BasePage {
     private WebElement price;
 
 
-    public BigDecimal getPrice(){
+    public BigDecimal getPrice() {
         return getPrice(price);
     }
 
