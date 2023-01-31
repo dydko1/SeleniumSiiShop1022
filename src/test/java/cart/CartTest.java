@@ -23,10 +23,7 @@ public class CartTest extends Pages {
 
     @Test
     public void shouldVerifyCartCalculationsV2() {
-        productGridPage
-                .openProduct("HUMMINGBIRD SWEATER")
-                .setQuantity(5)
-                .addProductToBasket()
+        productGridPage.openProduct("HUMMINGBIRD SWEATER").setQuantity(5).addProductToBasket()
                 .proceedToCheckout();
 
         softAssertions.assertThat(cartPage.getProductName()).isEqualTo("HUMMINGBIRD SWEATER");
