@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 
 public class CartTest extends Pages {
 
+    // zabawa w dynamix
     @Test
     public void shouldVerifyCartCalculations() {
         productGridPage.openProduct("HUMMINGBIRD SWEATER");

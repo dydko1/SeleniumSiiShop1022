@@ -15,11 +15,13 @@ public class TestBase {
 
     @BeforeMethod
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         softAssertions = new SoftAssertions();
-        ChromeOptions option = new ChromeOptions();
-        option.addArguments("start-maximized");
-        driver = new ChromeDriver(option);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("start-maximized");
+        options.addArguments("--remote-allow-origins=*");
+
+        driver = new ChromeDriver(options);
         driver.get(UrlProvider.app);
     }
 
