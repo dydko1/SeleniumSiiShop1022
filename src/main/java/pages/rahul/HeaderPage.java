@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.base.BasePage;
 
-public class LoginPage extends BasePage {
+public class HeaderPage extends BasePage {
 
-    public LoginPage(WebDriver driver) {
+    public HeaderPage(WebDriver driver) {
         super(driver);
     }
 
@@ -16,5 +16,7 @@ public class LoginPage extends BasePage {
 
     public void clickLogin() {
         loginBtn.click();
+
+       // return new LoginPage(driver);
     }
 }

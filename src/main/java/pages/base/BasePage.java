@@ -2,6 +2,8 @@ package pages.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.HasDevTools;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
@@ -23,6 +25,7 @@ public class BasePage {
 
     private void initDriver(WebDriver driver) {
         this.driver = driver;
+        this.devTools= ((HasDevTools) driver).getDevTools();
         actions = new Actions(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
@@ -30,6 +33,7 @@ public class BasePage {
     public WebDriver driver;
     public Actions actions;
     public WebDriverWait wait;
+    public DevTools devTools;
 
     public void click(WebElement element) {
         System.out.println("Clicking on: " + element.getText());

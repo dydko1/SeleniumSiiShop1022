@@ -1,53 +1,52 @@
 package pages.rahul;
 
-import lombok.extern.java.Log;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import pages.base.BasePage;
 
 @Slf4j
-public class LoginPage extends BasePage {
+public class AlertPage extends BasePage {
 
-    public LoginPage(WebDriver driver) {
+    public AlertPage(WebDriver driver) {
         super(driver);
     }
 
-    @FindBy(css = "#inputUsername")
-    private WebElement userNameField;
-    @FindBy(css = "input[placeholder='Password']")
-    private WebElement passwordField;
-    @FindBy(css = "#chkboxOne")
-    private WebElement userNameCheckBox;
-    @FindBy(css = "#chkboxTwo")
-    private WebElement agreeCheckBox;
-    @FindBy(css = "button[type='submit']")
-    private WebElement signInBtn;
+    @FindBy(css = "#name")
+    private WebElement nameField;
+    @FindBy(id = "alertbtn")
+    private WebElement alertBtnField;
 
-    public void fillLoginForm() {
-        fillEmail();
-        fillPassword();
-        userNameCheckBox
-                .click();
-        agreeCheckBox
-                .click();
-        System.out.println();
-        signInBtn
-                .click();
-        System.out.println();
+    public void fillAlertForm() {
+        fillAlertName();
+        clickAlert();
+        switchAlert();
     }
 
-
-    private void fillEmail() {
-        log.info("miro {} blablbla","test123");
-        //userNameField.clear();
-        userNameField.sendKeys("miroslaw.dyduch@gmail.com");
+    private void fillAlertName() {
+        log.info("Clicking btn {} ", "test123");
+        nameField
+                .sendKeys("ddddd");
     }
 
-    private void fillPassword() {
-        //passwordField.clear();
-        passwordField.sendKeys("rahulshettyacademy");
+    private void clickAlert() {
+        log.info("Clicking {} alert", "alert");
+        alertBtnField
+                .click();
+    }
+
+    private void switchAlert() {
+        log.info("Presenting {}", getAlert().getText());
+        getAlert()
+                .accept();
+    }
+
+    private Alert getAlert() {
+        return driver
+                .switchTo()
+                .alert();
     }
 }
