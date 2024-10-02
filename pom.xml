@@ -12,13 +12,13 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <webdrivermanagerVerion>5.9.2</webdrivermanagerVerion>
+        <webdrivermanagerVersion>5.9.2</webdrivermanagerVersion>
         <assertjVersion>3.26.3</assertjVersion>
         <seleniumJavaVersion>4.25.0</seleniumJavaVersion>
-        <testngVerion>7.10.2</testngVerion>
-        <javafakerVerion>1.0.2</javafakerVerion>
+        <testngVersion>7.10.2</testngVersion>
+        <javafakerVersion>1.0.2</javafakerVersion>
         <cucumberVersion>7.19.0</cucumberVersion>
-        <lombokVerion>1.18.34</lombokVerion>
+        <lombokVersion>1.18.34</lombokVersion>
         <slf4jVeriosn>2.1.0-alpha1</slf4jVeriosn>
     </properties>
     <dependencies>
@@ -38,13 +38,13 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>${webdrivermanagerVerion}</version>
+            <version>${webdrivermanagerVersion}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>${testngVerion}</version>
+            <version>${testngVersion}</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
@@ -64,7 +64,7 @@
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
-            <version>${javafakerVerion}</version>
+            <version>${javafakerVersion}</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -75,7 +75,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombokVerion}</version>
+            <version>${lombokVersion}</version>
 <!--            <scope>provided</scope>-->
         </dependency>
         <dependency>
