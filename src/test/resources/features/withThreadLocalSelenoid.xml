@@ -6,6 +6,9 @@
         <classes>
             <class name="withThreadLocalSelenoid.TestLambdaTestPlaygroundSelenoid"/>
             <class name="withThreadLocalSelenoid.TestLambdaTestEcommerceSelenoid"/>
+            <class name="withThreadLocalSelenoid.TestOnet"/>
+            <class name="withThreadLocalSelenoid.TestWp"/>
+            <class name="withThreadLocalSelenoid.TestInteria"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

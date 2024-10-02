@@ -40,6 +40,10 @@ public class BaseTestWithThreadLocalSelenoid {
         return driver.get();
     }
 
+    public static WebDriver getDriver2() {
+        return driver.get();
+    }
+
     @AfterClass
     public void closeBrowser() {
         System.out.println("Browser closed by Thread : " + Thread.currentThread().getId()
