@@ -30,7 +30,7 @@ public class BaseTestWithThreadLocalSelenoid {
         }});
 
         try {
-            driver.set( new RemoteWebDriver(new URL("http://192.168.10.61:4444/wd/hub"), options));
+            driver.set(new RemoteWebDriver(new URL("http://192.168.10.61:4444/wd/hub"), options));
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
